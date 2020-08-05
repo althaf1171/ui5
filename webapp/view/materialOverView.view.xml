@@ -1,0 +1,76 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.f" xmlns:fb="sap.ui.comp.filterbar" xmlns:vm="sap.ui.comp.variants" xmlns:html="http://www.w3.org/1999/xhtml" height="100%" controllerName="sampleCoreElements.sampleCoreElements.controller.materialOverView">
+	<App id="materialoverview">
+		<pages>
+			<Page title="material over view">
+				<content>
+				
+				<f:DynamicPageTitle>
+					<f:heading>
+						<vm:VariantManagement standardItemText="My Products">
+						</vm:VariantManagement>
+					</f:heading>
+					<f:actions>
+						<ToolbarSpacer/>
+						<Button text="Global Action" type="Transparent"/>
+						<Button text="Toggle Footer" type="Transparent" press="onToggleFooter"/>
+						<Button icon="sap-icon://action" type="Transparent"/>
+					</f:actions>
+				</f:DynamicPageTitle>
+				
+				<Table noDataText="Drop column list items here and columns in the area above" id="table0">
+				
+				    <items>
+				
+				        <ColumnListItem type="Active" id="item0">
+				
+				            <cells>
+				
+								 <Text text="{optionForUsers>title}"/>
+				                <Text text="Row 1 Cell 2" id="text2"/>
+				
+				                <Text text="Row 1 Cell 3" id="text3"/></cells>
+				
+				        </ColumnListItem>
+				
+				    </items>
+				
+				    <columns>
+				
+				        <Column id="column0">
+				
+				            <header>
+				
+				                <Label text="{optionForUsers>title}" id="label0"/>
+				
+				            </header>
+				
+				        </Column>
+				
+				        <Column id="column1">
+				
+				            <header>
+				
+				                <Label text="Header 2" id="label1"/>
+				
+				            </header>
+				
+				        </Column>
+				
+				        <Column id="column2">
+				
+				            <header>
+				
+				                <Label text="Header 3" id="label2"/>
+				
+				            </header>
+				
+				        </Column></columns></Table>
+				
+
+				
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
